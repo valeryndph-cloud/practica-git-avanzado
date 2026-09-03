@@ -15,7 +15,6 @@ def dividir(a, b):
     return a / b
 
 print("Bienvenido a la calculadora")
-# vamos hacer un menu para que el usuario pueda elegir la operación que desea realizar
 numero1 = float(input("Ingrese el primer número: "))
 numero2 = float(input("Ingrese el segundo número: "))
 
