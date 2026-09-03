@@ -14,6 +14,9 @@ def dividir(a, b):
         raise ValueError("No se puede dividir entre cero.")
     return a / b
 
+def potencia(base, exponente):
+    return base ** exponente
+
 print("Bienvenido a la calculadora")
 numero1 = float(input("Ingrese el primer número: "))
 numero2 = float(input("Ingrese el segundo número: "))
@@ -23,9 +26,10 @@ print ("1. Sumar")
 print ("2. Restar")
 print ("3. Multiplicar")
 print ("4. Dividir")
+print ("5. Potencia")
 print ("########################")
 
-operacion = input("Seleccione la operación que desea realizar (1/2/3/4): ")
+operacion = input("Seleccione la operación que desea realizar (1/2/3/4/5): ")
 
 if operacion == "1":
     resultado = sumar(numero1, numero2)
