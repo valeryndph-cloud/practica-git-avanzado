@@ -7,7 +7,8 @@ para practicar comandos avanzados de Git.
 - Sumar
 - Restar
 - Multiplicar
-
+- Dividir
+- Menú de opciones para seleccionar las operaciones
 ## 📝 Cómo ejecutar
 ```
 python calculadora.py
