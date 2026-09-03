@@ -74,7 +74,7 @@ elif operacion == "7":
 elif operacion == "8":
     lista = []
     while True:
-        num = input("Ingrese un número (o 'fin' para terminar): ")
+        num = input("Ingrese un numero (o 'fin' para terminar): ")
         if num == "fin":
             break
         lista.append(float(num))
