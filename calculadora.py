@@ -65,7 +65,7 @@ elif operacion == "5":
     print(f"El resultado de la potencia es: {resultado}")
 elif operacion == "6":
     resultado = raiz_cuadrada(numero1)
-    print(f"El resultado de la raíz cuadrada es: {resultado}")
+    print(f"El resultado de la raiz cuadrada es: {resultado}")
     
 elif operacion == "7":
     porcentaje_input = float(input("Ingrese el porcentaje que desea calcular: "))
