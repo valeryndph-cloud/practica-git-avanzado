@@ -8,6 +8,10 @@ para practicar comandos avanzados de Git.
 - Restar
 - Multiplicar
 - Dividir
+- Potencia 
+- Raíz Cuadrada 
+- Porcentaje 
+- Promedio 
 - Menú de opciones para seleccionar las operaciones
 ## 📝 Cómo ejecutar
 ```
