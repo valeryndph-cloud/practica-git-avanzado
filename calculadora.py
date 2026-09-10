@@ -26,12 +26,11 @@ def porcentaje(numero, porcentaje):
     return numero * (porcentaje / 100)
 
 def promedio(lista_numeros):
+    if len(lista_numeros) == 0: # Evita error si la lista está vacía
+        return 0
     return sum(lista_numeros) / len(lista_numeros)
 
 print("Bienvenido a la calculadora")
-numero1 = float(input("Ingrese el primer número: "))
-numero2 = float(input("Ingrese el segundo número: "))
-
 print ("####### Opciones #######") 
 print ("1. Sumar")
 print ("2. Restar")
@@ -45,34 +44,43 @@ print ("########################")
 
 operacion = input("Seleccione la operación que desea realizar (1/2/3/4/5/6/7/8): ")
 
-if operacion == "1":
-    resultado = sumar(numero1, numero2)
-    print(f"El resultado de la suma es: {resultado}")
-elif operacion == "2":
-    resultado = restar(numero1, numero2)
-    print(f"El resultado de la resta es: {resultado}")
-elif operacion == "3":
-    resultado = multiplicar(numero1, numero2)
-    print(f"El resultado de la multiplicación es: {resultado}")
-elif operacion == "4":
-    try:
-        resultado = dividir(numero1, numero2)
-        print(f"El resultado de la división es: {resultado}")
-    except ValueError as e:
-        print(f"Error: {e}")
-elif operacion == "5":
-    resultado = potencia(numero1, numero2)
-    print(f"El resultado de la potencia es: {resultado}")
+# Ahora pedimos los números aquí adentro, solo si la operación elegida los necesita
+if operacion in ["1", "2", "3", "4", "5"]:
+    numero1 = float(input("Ingrese el primer número: "))
+    numero2 = float(input("Ingrese el segundo número: "))
+
+    if operacion == "1":
+        resultado = sumar(numero1, numero2)
+        print(f"El resultado de la suma es: {resultado}")
+    elif operacion == "2":
+        resultado = restar(numero1, numero2)
+        print(f"El resultado de la resta es: {resultado}")
+    elif operacion == "3":
+        resultado = multiplicar(numero1, numero2)
+        print(f"El resultado de la multiplicación es: {resultado}")
+    elif operacion == "4":
+        try:
+            resultado = dividir(numero1, numero2)
+            print(f"El resultado de la división es: {resultado}")
+        except ValueError as e:
+            print(f"Error: {e}")
+    elif operacion == "5":
+        resultado = potencia(numero1, numero2)
+        print(f"El resultado de la potencia es: {resultado}")
+
 elif operacion == "6":
+    numero1 = float(input("Ingrese el número: ")) # Solo pide un número
     resultado = raiz_cuadrada(numero1)
     print(f"El resultado de la raiz cuadrada es: {resultado}")
     
 elif operacion == "7":
+    numero1 = float(input("Ingrese el número base: "))
     porcentaje_input = float(input("Ingrese el porcentaje que desea calcular: "))
     resultado = porcentaje(numero1, porcentaje_input)
     print(f"El {porcentaje_input}% de {numero1} es: {resultado}")
+
 elif operacion == "8":
-    lista = []
+    lista = [] # No pide números al inicio, va directo a la lista
     while True:
         num = input("Ingrese un numero (o 'fin' para terminar): ")
         if num == "fin":
@@ -82,3 +90,5 @@ elif operacion == "8":
     print(f"El promedio es: {resultado}")
 else:
     print("Operación no válida")
+
+    
