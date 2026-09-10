@@ -107,3 +107,31 @@ muestra este comando.
 
 ## ✅ Entrega
 Link de tu repositorio (fork) + pantallazo de "git log --oneline"
+
+
+## Versionado semántico
+
+El versionado semántico, también conocido como Semantic Versioning, utiliza tres números para identificar las versiones de un software:
+
+**MAJOR.MINOR.PATCH**
+
+- **MAJOR:** cambia cuando se realizan cambios importantes que pueden romper funcionalidades anteriores.
+  - Ejemplo: pasar de `v1.0.0` a `v2.0.0` cuando se cambia completamente la forma de usar una funcionalidad.
+
+- **MINOR:** cambia cuando se agrega una nueva funcionalidad sin romper las funcionalidades existentes.
+  - Ejemplo: pasar de `v1.0.0` a `v1.1.0` al agregar una nueva operación a la calculadora.
+
+- **PATCH:** cambia cuando se corrigen errores pequeños sin agregar cambios importantes.
+  - Ejemplo: pasar de `v1.1.0` a `v1.1.1` al corregir un error en una operación.
+
+
+## Git: Stash y Tag
+
+### Git Stash
+
+`git stash` permite guardar temporalmente cambios que todavía no queremos convertir en un commit. De esta manera podemos dejar el proyecto limpio, realizar otra tarea y posteriormente recuperar los cambios.
+
+### Git Tag
+
+`git tag` permite marcar un commit específico con un nombre de versión. Es útil para identificar versiones importantes del proyecto, por ejemplo `v1.0`.
+
